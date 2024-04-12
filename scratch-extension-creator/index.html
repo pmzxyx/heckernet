@@ -8,6 +8,7 @@
     <meta name="author" content="Hecker">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
+    <script defer src="https://unpkg.com/blockly/blockly.min.js"></script>
     <style>
         /*body {
             font-family: open sans;
@@ -174,12 +175,36 @@
                 width: 100%;
                 height: 70px;
             }
+            #content {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                display: block;
+            }
+            #app {
+                border-radius: 5px;
+                position: fixed;
+                background-color: var(--terminal_light_panel);
+                background: var(--terminal_light_panel);
+                color: var(--terminal_light_text);
+                margin: 24px 16px;
+                padding: 24px;
+                min-height: 250px;
+                box-sizing: border-box;
+                flex: auto;
+            }
+
         }
     </style>
 </head>
 
 <body>
-    <h1>Extension Creator</h1>
+    <div id="content">
+        <div id="app">
+
+        </div>
+    </div>
 </body>
 
 </html>
