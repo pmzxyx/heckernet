@@ -113,6 +113,7 @@
 
         @media (prefers-color-scheme: dark) {
             body {
+                transition: all 0.5s;
                 font-family: Hack;
                 color: var(--terminal_dusk_text);
                 background-color: var(--terminal_dusk_background);
@@ -145,10 +146,55 @@
                 width: 100%;
                 height: 70px;
             }
+
+            #content {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                display: block;
+                top: 0px;
+                bottom: 0px;
+            }
+
+            #app {
+                border-radius: 5px;
+                position: fixed;
+                background-color: var(--terminal_dusk_panel);
+                background: var(--terminal_dusk_panel);
+                color: var(--terminal_dusk_text);
+                margin: 24px 16px;
+                padding: 24px;
+                min-height: 250px;
+                min-width: 75%;
+                box-sizing: border-box;
+                flex: auto;
+            }
+
+            #appSection {
+                display: flex;
+                flex: auto;
+                flex-direction: column;
+                min-height: 0;
+                background: var(--terminal_dusk_panel);
+                overflow-x: hidden; /* no x scroll */
+            }
+            .navbar {
+                background: var(--terminal_dusk_panel);
+                padding: 0px;
+                border: none;
+                width: 100%;
+                height: 64px;
+                padding: 0 50px;
+                line-height: 64px;
+                left: 0px;
+                position: fixed;
+            }
         }
 
         @media (prefers-color-scheme: light) {
             body {
+                transition: all 0.5s;
                 font-family: Hack;
                 color: var(--terminal_light_text);
                 background-color: var(--terminal_light_background);
@@ -175,13 +221,17 @@
                 width: 100%;
                 height: 70px;
             }
+
             #content {
                 position: fixed;
                 width: 100%;
                 height: 100%;
                 box-sizing: border-box;
                 display: block;
+                top: 0px;
+                bottom: 0px;
             }
+
             #app {
                 border-radius: 5px;
                 position: fixed;
@@ -190,20 +240,27 @@
                 color: var(--terminal_light_text);
                 margin: 24px 16px;
                 padding: 24px;
-                min-height: 250px;
+                min-height: calc(97vh - 280px);
+                min-width: calc(100vh - 76%);
                 box-sizing: border-box;
                 flex: auto;
             }
-
         }
     </style>
 </head>
 
 <body>
     <div id="content">
-        <div id="app">
-
-        </div>
+        <section id="page">
+            <aside id="sidebar">
+                <div id="sidebarDiv"></div>
+            </aside>
+            <section id="appSection">
+                <header class="navbar">
+                    
+                </header>
+            </section>
+        </section>
     </div>
 </body>
 
