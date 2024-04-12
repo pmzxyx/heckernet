@@ -1,10 +1,185 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Easily create custom Scratch Extensions, and convert them into JavaScript.">
-        <meta name="keywords" content="Scratch, Extensions, JavaScript, Custom">
-        <meta name="author" content="Hecker">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Easily create custom Scratch Extensions, and convert them into JavaScript.">
+    <meta name="keywords" content="Scratch, Extensions, JavaScript, Custom">
+    <meta name="author" content="Hecker">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
+    <style>
+        /*body {
+            font-family: open sans;
+            font-size: 16px;
+            background-color: #fff;
+            color: gray;
+            box-sizing: border-box
+        }*/
+
+
+        .line {
+            margin: 4px 0;
+            display: flex;
+            justify-content: flex-start
+        }
+
+        .caret-icon {
+            width: 18px;
+            text-align: center;
+            cursor: pointer
+        }
+
+        .empty-icon {
+            width: 18px
+        }
+
+        .json-type {
+            margin-right: 4px;
+            margin-left: 4px
+        }
+
+        .json-key {
+            color: #444;
+            margin-right: 4px;
+            margin-left: 4px
+        }
+
+        .json-index {
+            margin-right: 4px;
+            margin-left: 4px
+        }
+
+        .json-separator {}
+
+        .json-value {
+            margin-left: 8px
+        }
+
+        .json-number {
+            color: #f9ae58
+        }
+
+        .json-boolean {
+            color: #ec5f66
+        }
+
+        .json-string {
+            color: #86b25c
+        }
+
+        .json-size {
+            margin-right: 4px;
+            margin-left: 4px
+        }
+
+        .hide {
+            display: none
+        }
+
+        :root {
+            --terminal_dusk_background: #22273E;
+            --terminal_dusk_text: #FFFFFF;
+            --terminal_dusk_cursorbeam: #87FFC580;
+            --terminal_dusk_panel: #32395a;
+
+            --terminal_dark_background: #202124;
+            --terminal_dark_text: #FFFFFF;
+            --terminal_dark_cursorbeam: #669DF680;
+            --terminal_dark_panel: #2c2d31;
+
+            --terminal_light_background: #FFFFFF;
+            --terminal_light_text: #000000;
+            --terminal_light_cursorbeam: #1967D280;
+            --terminal_light_panel: #dddddd;
+
+            --terminal_classic_background: #101010;
+            --terminal_classic_text: #FFFFFF;
+            --terminal_classic_cursorbeam: #FF000080;
+            --terminal_classic_panel: #2c2d31;
+
+            --terminal_solarized_dark_background: #002B36;
+            --terminal_solarized_dark_text: #83949680;
+            --terminal_solarized_dark_cursorbeam: #93A1A180;
+            --terminal_solarized_dark_panel: #023a49;
+
+            --terminal_solarized_light_background: #FDF6E3;
+            --terminal_solarized_light_text: #657B83;
+            --terminal_solarized_light_cursorbeam: #586E7580;
+            --terminal_solarized_light_panel: #dedbd2;
+
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                font-family: Hack;
+                color: var(--terminal_dusk_text);
+                background-color: var(--terminal_dusk_background);
+            }
+
+            .json-key {
+                color: #dcdcdc;
+                margin-right: 4px;
+                margin-left: 4px
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            span,
+            a {
+                font-family: Hack;
+                color: var(--terminal_dusk_text);
+            }
+
+            #db {
+                right: 0;
+                left: 0;
+                position: fixed;
+                top: 0px;
+                background-color: var(--terminal_dusk_panel);
+                width: 100%;
+                height: 70px;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                font-family: Hack;
+                color: var(--terminal_light_text);
+                background-color: var(--terminal_light_background);
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            span,
+            a {
+                font-family: Hack;
+                color: var(--terminal_light_text);
+            }
+
+            #db {
+                right: 0;
+                left: 0;
+                position: fixed;
+                top: 0px;
+                background-color: var(--terminal_light_panel);
+                width: 100%;
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Extension Creator</h1>
+</body>
+
 </html>
